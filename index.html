@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Code Highlighter</title>
+    <link rel="stylesheet" href="./monokai-sublime.min.css" />
+    <style>
+        .copy-button {
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: #f1f1f1;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <textarea id="code-input" rows="10" cols="50"></textarea>
+    <br>
+    <button onclick="highlightCode()">Highlight</button>
+    <br>
+    <div id="generated-code">
+        <pre><code id="highlighted-code" class="language-python"></code></pre>
+    </div>
+    <br>
+    <button class="copy-button" onclick="copyCode()">Copy HTML</button>
+
+    <script src="./highlight.min.js"></script>
+    <script src="./python.min.js"></script>
+    <script>
+        hljs.highlightAll();
+        
+        function highlightCode() {
+            var codeInput = document.getElementById("code-input").value;
+            document.getElementById("highlighted-code").innerHTML = codeInput;
+            hljs.highlightElement(document.getElementById("highlighted-code"));
+        }
+        
+        function copyCode() {
+            var codeElement = document.getElementById("generated-code").innerHTML;
+            var tempElement = document.createElement("textarea");
+            tempElement.value = codeElement;
+            document.body.appendChild(tempElement);
+            tempElement.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempElement);
+            alert("HTML code copied!");
+        }
+    </script>
+</body>
+</html>

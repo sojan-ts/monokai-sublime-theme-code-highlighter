@@ -1,0 +1,56 @@
+<html>
+<head>
+<style>
+.hljs-meta  {
+color: #75715e;
+}
+.hljs-params {
+    color: #f8f8f2;
+}
+.hljs-string {
+    color: #e6db74;
+}
+.hljs-keyword {
+    color: #f92672;
+}
+.hljs-title  {
+    color: #a6e22e;
+}
+.hljs-number {
+    color: #ae81ff;
+}
+.hljs-comment {
+    color: #75715e;
+}
+.hljs-built_in {
+    color: #e6db74;
+}
+.hljs-literal {
+    color: #ae81ff;
+}
+.background {
+    background-color: #23241f;
+    color: #ffffff;
+}
+</style>
+</head>
+<body>
+
+
+    
+    <pre class="background"><code id="highlighted-code" class="language-python hljs"><span class="hljs-meta">@requires_authorization(<span class="hljs-params">roles=[<span class="hljs-string">"ADMIN"</span>]</span>)</span>
+        <span class="hljs-keyword">def</span> <span class="hljs-title function_">somefunc</span>(<span class="hljs-params">param1=<span class="hljs-string">''</span>, param2=<span class="hljs-number">0</span></span>):
+            <span class="hljs-string">r'''A docstring'''</span>
+            <span class="hljs-keyword">if</span> param1 &gt; param2: <span class="hljs-comment"># interesting</span>
+                <span class="hljs-built_in">print</span> <span class="hljs-string">'Gre\'ater'</span>
+            <span class="hljs-keyword">return</span> (param2 - param1 + <span class="hljs-number">1</span> + <span class="hljs-number">0b10l</span>) <span class="hljs-keyword">or</span> <span class="hljs-literal">None</span>
+        
+        <span class="hljs-keyword">class</span> <span class="hljs-title class_">SomeClass</span>:
+            <span class="hljs-keyword">pass</span>
+        
+        <span class="hljs-meta">&gt;&gt;&gt; </span>message = <span class="hljs-string">'''interpreter
+        <span class="hljs-meta">... </span>prompt</span></code></pre>
+            
+
+</body>
+</html>
